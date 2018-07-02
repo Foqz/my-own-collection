@@ -8,5 +8,7 @@ public class OwnCollectionApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OwnCollectionApplication.class, args);
+
     }
+
 }
