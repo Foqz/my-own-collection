@@ -30,6 +30,23 @@ public class StringCollection {
             newElement.setPrev(curr);
         }
     }
-
+    public boolean removeElement(String s) {
+        Element current = collectionHead;
+        while(!current.getValue().equals(s) && current.getNext() != null) {
+            current = current.getNext();
+        }
+        if (!current.getValue().equals(s)) {
+            return false;
+        }
+        if(current == collectionHead){
+            collectionHead = null;
+        } else if (current.getNext() == null) {
+            current.setNext(null);
+        } else  {
+            current.getPrev().setNext(current.getNext());
+            current.getNext().setPrev(current.getPrev());
+        }
+        return true;
+    }
 }
 

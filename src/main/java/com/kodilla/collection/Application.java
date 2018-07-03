@@ -8,5 +8,7 @@ public class Application {
         sc.addElement("trzeci");
         sc.addElement("czwarty");
         System.out.println(sc.getElement(2));
+        sc.removeElement("drugi");
+        System.out.println(sc.getElement(2));
     }
 }
