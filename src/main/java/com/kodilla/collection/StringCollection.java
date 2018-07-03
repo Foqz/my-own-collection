@@ -39,7 +39,7 @@ public class StringCollection {
             return false;
         }
         if(current == collectionHead){
-            collectionHead = null;
+            collectionHead = collectionHead.getNext();
         } else if (current.getNext() == null) {
             current.setNext(null);
         } else  {
